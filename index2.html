@@ -1,0 +1,116 @@
+<!-- Declaração do tipo de documento -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Configuração de caracteres e viewport para responsividade -->
+    <meta charset="UTF-8">
+    <!-- Define a largura da página para o tamanho da tela do dispositivo e escala inicial -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título da página que aparece na aba do navegador -->
+    <title>Meu Website Profissional</title>
+    
+    <!-- Inclusão da folha de estilo (CSS) para layout horizontal -->
+    <link id="estilo" rel="stylesheet" href="style-vertical.css">
+</head>
+<body>
+    <!-- Cabeçalho da página, geralmente contém o título e elementos principais -->
+    <header>
+        <!-- Título principal do site, visível na parte superior da página -->
+        <h1>Meu Website Profissional</h1>
+        
+        <!-- Botão para alternar entre estilos (horizontal e vertical) -->
+        <button onclick="trocarEstilo()">Trocar Estilo</button>
+    </header>
+
+    <!-- Menu de navegação, ajuda os usuários a navegar entre as seções do site -->
+    <nav>
+        <ul>
+            <!-- Itens do menu, cada um é um link para uma seção específica -->
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="Login.html">voltar</a></li>
+        </ul>
+    </nav>
+
+    <!-- Área principal do site onde o conteúdo é exibido -->
+    <main>
+        <!-- Seção "Início", a primeira seção do site -->
+        <BR>
+            <section id="inicio">
+                <h2>Bem-vindo!</h2>
+                <p>Fala aí! Eu sou o Rafael, um apaixonado por tecnologia e inovação. Este é o meu espaço digital, onde compartilho um pouco da minha trajetória e dos projetos que venho desenvolvendo. Se você curte código, desafios e soluções criativas, está no lugar certo!</p>
+            </section>
+        
+            <section id="sobre">
+                <h2>Sobre Mim</h2>
+                <p><strong>Idade:</strong> 24 anos</p>
+                <p><strong>Faculdade:</strong> Ciência da Computação</p>
+                <p><strong>Cidade:</strong> São Paulo, SP</p>
+                <p>Desde pequeno, eu desmontava qualquer eletrônico que encontrava pela frente (muito para o desespero dos meus pais 😆). Foi assim que descobri minha paixão por tecnologia e resolvi seguir a área de computação. Hoje, sou estudante de Ciência da Computação e trabalho como desenvolvedor full stack freelancer.</p>
+                <p>Gosto de desafios que envolvem lógica e otimização de processos. No meu tempo livre, estou sempre estudando sobre segurança cibernética e desenvolvimento de aplicações escaláveis. Ah, e também curto muito jogos! Inclusive, já brinquei com desenvolvimento de games em Godot e Unity.</p>
+                <h3>Experiências Profissionais</h3>
+                <ul>
+                    <li>Estagiário em Desenvolvimento Web na <strong>TechNova Solutions</strong> (1 ano)</li>
+                    <li>Freelancer em projetos de automação de processos e criação de APIs REST</li>
+                    <li>Criador de um sistema de gerenciamento de tarefas para pequenas empresas</li>
+                </ul>
+            </section>
+        
+            <section id="portfolio">
+                <h2>Portfólio</h2>
+                <p><strong>Projetos e Experimentos:</strong></p>
+                <ul>
+                    <li><strong>TaskFlow</strong> – Sistema web para gerenciamento de tarefas, com painel administrativo e notificações em tempo real.</li>
+                    <li><strong>SafeBank API</strong> – API REST para transações financeiras seguras, com autenticação JWT e criptografia de dados.</li>
+                    <li><strong>AutoBot WhatsApp</strong> – Bot de atendimento automatizado integrado ao WhatsApp, feito com Node.js e Puppeteer.</li>
+                    <li><strong>Mini Game 2D</strong> – Pequeno jogo estilo plataforma criado no Unity como projeto pessoal.</li>
+                </ul>
+            </section>
+
+        <!-- Seção "Contato", com um formulário para os usuários entrarem em contato -->
+        <section id="contato">
+            <!-- Título para a seção -->
+            <h2>Contato</h2>
+            <!-- Texto explicativo para o usuário entender que pode preencher um formulário -->
+            <p>Preencha o formulário abaixo:</p>
+            
+            <!-- Formulário de contato, mas não envia dados pois tem o "onsubmit" que impede -->
+            <br>
+            <form onsubmit="return false;">
+                <!-- Campo de entrada para o nome do usuário -->
+                <input type="text" id="nome" name="nome" placeholder="Nome" required>
+                
+                <!-- Campo de entrada para o e-mail do usuário -->
+                <input type="email" id="email" name="email" placeholder="E-mail" required>
+                
+                <!-- Área de texto para o usuário escrever a mensagem -->
+                <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" required></textarea>
+                
+                <!-- Botão para enviar o formulário -->
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Rodapé da página, geralmente contém informações sobre direitos autorais -->
+    <footer>
+        <!-- Texto de copyright -->
+        <p>&copy; 2025 - Desenvolvido com paixão por Pedro Bonomo</p>
+    </footer>
+
+    <!-- Script JavaScript para alternar entre os estilos horizontal e vertical -->
+    <script>
+        // Função chamada quando o botão "Trocar Estilo" é clicado
+        function trocarEstilo() {
+            // Obtém o elemento <link> que carrega a folha de estilo
+            let estilo = document.getElementById("estilo");
+            
+            // Verifica se o estilo atual é o "horizontal" e alterna para "vertical", ou vice-versa
+            estilo.href = estilo.href.includes("vertical") ? "style-horizontal.css" : "style-vertical.css";
+        }
+    </script>
+</body>
+</html>

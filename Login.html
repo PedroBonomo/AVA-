@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="login-aba" class="login-container">
+        <div class="login-content">
+            <div class="profile-container">
+                <img src="img/1.jpg" alt="Foto de perfil" class="profile-pic">
+            </div>
+            <div class="buttons">
+                <h1> Alunos </h1>
+                <BR>
+                <button onclick="window.location.href='index1.html'">Pedro Augusto Bonomo Maia</button>
+                <button onclick="window.location.href='index2.html'">Rafael Monteiro da Silva</button>
+                <button onclick="window.location.href='index3.html'">Camila Fernandes Oliveira</button>
+                <button onclick="window.location.href='index4.html'">Tiago Moreira Castro</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body, html {
+        height: 100%;
+        width: 100%;
+    }
+
+    .login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        background: linear-gradient(90deg, #004d80, #00acc1);
+    }
+
+    .login-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        position: relative;
+    }
+
+    .profile-container {
+        position: absolute;
+        top: -60px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #b3e5fc;
+        background: white;
+    }
+
+    .buttons {
+        margin-top: 60px;
+    }
+    .buttons h1 {
+       color: #004d80;
+       text-align: center;
+    }
+
+    .buttons button {
+        display: block;
+        width: 100%;
+        margin: 5px 0;
+        padding: 10px;
+        background: #00838f;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .buttons button:hover {
+        background: #004d80;
+    }
+</style>

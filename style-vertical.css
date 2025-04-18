@@ -1,0 +1,174 @@
+/* Reset Geral - Remove margens e preenchimentos padrões dos elementos e configura o box-sizing para 'border-box' */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configurações gerais do corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+    display: flex; /* Usa flexbox para organizar os elementos */
+    flex-direction: column; /* Mantém os elementos empilhados verticalmente */
+    background-color: #e0f7fa; /* Define a cor de fundo azul claro */
+    color: #004d80; /* Define a cor do texto */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+}
+
+/* Cabeçalho */
+/* Header com Flexbox */
+header {
+    display: flex;
+    align-items: center;           /* Centraliza verticalmente */
+    justify-content: center;       /* Centraliza tudo horizontalmente */
+    gap: 40px;                     /* Espaço entre imagem e texto */
+    padding: 20px;
+    background: linear-gradient(90deg, #004d80, #00acc1);
+    color: white;
+    width: 100%;
+}
+
+/* Caixa da esquerda (imagem) */
+.left-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Imagem de perfil */
+.profile-pic {
+    /*width: 100px;*/
+    height: 100px;
+    /*border-radius: 80%;*/
+    object-fit: cover;
+}
+
+/* Caixa da direita (título e botão) */
+.right-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;           /* Centraliza o conteúdo na horizontal */
+    justify-content: center;       /* Centraliza o conteúdo na vertical */
+    gap: 10px;
+}
+
+/* Botão dentro do cabeçalho */
+.right-box button {
+    width: fit-content;
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #00838f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.right-box button:hover {
+    background-color: #004d80;
+}
+
+
+.cont {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu de navegação */
+nav {
+    width: 100%; /* Ocupa toda a largura */
+    background: #00838f; /* Define a cor de fundo */
+    padding: 10px 0; /* Adiciona espaçamento interno */
+}
+
+nav ul {
+    list-style: none; /* Remove os marcadores da lista */
+    display: flex; /* Usa flexbox para organizar os links */
+    justify-content: center; /* Centraliza os itens */
+    gap: 20px; /* Adiciona espaçamento entre os links */
+}
+
+nav ul li a {
+    color: white; /* Define a cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    font-weight: bold; /* Deixa o texto em negrito */
+    padding: 10px 15px; /* Adiciona espaçamento interno */
+    transition: 0.3s; /* Suaviza a transição de efeitos */
+}
+
+nav ul li a:hover {
+    background: #004d80; /* Muda a cor de fundo ao passar o mouse */
+    border-radius: 5px; /* Adiciona cantos arredondados */
+}
+
+/* Estrutura Principal */
+main {
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 900px; /* Define um limite máximo para melhor legibilidade */
+    padding: 20px; /* Adiciona espaçamento interno */
+}
+
+/* Seções */
+section {
+    width: 100%; /* Ocupa toda a largura do conteúdo */
+    background: white; /* Fundo branco para contraste */
+    padding: 20px; /* Adiciona espaçamento interno */
+    border-radius: 10px; /* Arredonda as bordas */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra sutil */
+    margin-bottom: 20px; /* Adiciona espaçamento entre as seções */
+}
+ul {
+    list-style-position: inside;
+}
+
+section p, li, h3 {
+    text-align: center;
+}
+
+/* Formulário */
+form {
+    display: flex; /* Usa flexbox para alinhar os campos */
+    flex-direction: column; /* Organiza os campos na vertical */
+    gap: 10px; /* Adiciona espaçamento entre os campos */
+    width: 100%; /* Faz o formulário ocupar toda a largura disponível */
+    max-width: 400px; /* Define um limite para melhor legibilidade */
+    margin: auto; /* Centraliza o formulário */
+}
+
+form input, form textarea {
+    width: 100%; /* Ocupa toda a largura disponível */
+    padding: 10px; /* Adiciona espaçamento interno */
+    border: 1px solid #00838f; /* Adiciona uma borda sutil */
+    border-radius: 5px; /* Arredonda as bordas */
+}
+
+form textarea {
+    height: 100px; /* Define altura fixa */
+    resize: none; /* Impede redimensionamento manual */
+}
+
+/* Botão */
+button {
+    background: #00838f; /* Define a cor de fundo */
+    color: white; /* Define a cor do texto */
+    border: none; /* Remove bordas padrão */
+    padding: 10px; /* Adiciona espaçamento interno */
+    font-weight: bold; /* Torna o texto em negrito */
+    cursor: pointer; /* Muda cursor para indicar clicabilidade */
+    border-radius: 5px; /* Arredonda as bordas */
+}
+
+button:hover {
+    background: #004d80; /* Altera cor ao passar o mouse */
+}
+
+/* Rodapé */
+footer {
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Adiciona espaçamento interno */
+    background: linear-gradient(90deg, #004d80, #00acc1); /* Aplica degradê */
+    color: white; /* Cor do texto */
+    width: 100%; /* Ocupa toda a largura da página */
+}
