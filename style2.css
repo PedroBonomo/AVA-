@@ -6,16 +6,32 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #ffffff;
+}
+ div.carousel {
+
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden; /* Esconde o conteúdo que ultrapassa o limite do carrossel */
+  border-radius: 20px; /* Bordas arredondadas para o carrossel */
 }
 
+nav.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
 /* HEADER */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background: #fff;
+  background: #FFC943;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -54,7 +70,7 @@ nav a {
   font-size: 1rem;
   border: none;
   background: #333;
-  color: white;
+  color: rgb(255, 255, 255);
   cursor: pointer;
 }
 
@@ -64,7 +80,7 @@ nav a {
   justify-content: space-around;
   gap: 20px;
   padding: 40px 20px;
-  background: white;
+  background: rgb(214, 13, 13);
 }
 
 .card {
@@ -81,6 +97,56 @@ nav a {
   gap: 20px;
   padding: 40px 20px;
   background: #f9f9f9;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+.card h3 {
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+.carousel {
+  overflow: visible; /* muda de hidden para visible */
+}
+
+.carousel-track {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  overflow: visible; /* garante que nada seja escondido */
+}
+.carousel img {
+  width: 100%; /* Garante que as imagens se ajustem ao tamanho do carrossel */
+  height: auto; /* Mantém a proporção das imagens */
+  display: flex;
+}
+
+.carousel-item {
+  flex: 0 0 20%; /* 5 itens = 100% / 5 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.8);
+  filter: brightness(0.4);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.carousel-item.active {
+  transform: scale(1.1);
+  filter: brightness(1);
+}
+
+.carousel-item img {
+  width: 220px;         /* imagem maior */
+  height: 300px;        /* altura fixa */
+  object-fit: cover;    /* garante o preenchimento sem deformar */
+  border-radius: 20px;  /* bordas suavemente arredondadas */
 }
 
 .card.blue {
@@ -113,6 +179,38 @@ nav a {
   color: white;
   border: none;
   cursor: pointer;
+}
+
+/* SEÇÃO DE IMAGENS EM PIRÂMIDE */
+.pyramid-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas na linha superior */
+  gap: 20px;
+  padding: 40px 20px;
+  justify-content: center;
+}
+
+.pyramid-item:nth-child(4),
+.pyramid-item:nth-child(5) {
+  grid-column: span 2; /* Faz com que os itens 4 e 5 ocupem 2 colunas */
+ /* Centraliza os itens na linha inferior */
+}
+
+.pyramid-item {
+  text-align: center;
+}
+
+.pyramid-item img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.pyramid-item p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #333;
 }
 
 /* FOOTER */
