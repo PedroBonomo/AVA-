@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sobre</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #4B2A8C;
+      color: white;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    header nav {
+      display: flex;
+      gap: 20px;
+      font-size: 14px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      width: 100%;
+    }
+
+    header nav a {
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    .card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .card.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .profile-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 20%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .text-box {
+      color: #f9c232;
+      max-width: 500px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .cv-btn {
+      background-color: #7a52d6;
+      color: white;
+      padding: 8px;
+      border-radius: 25%;
+      font-weight: bold;
+      width: 40px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      flex-shrink: 0;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .cv-btn:hover {
+      background-color: #9c74f3;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .card, .card.reverse {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .text-box {
+        text-align: center;
+      }
+
+      header nav {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 20px 10px;
+      }
+
+      .profile-img {
+        width: 100px;
+        height: 100px;
+      }
+
+      .text-box {
+        font-size: 1rem;
+      }
+
+      .cv-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#">LINK 1</a>
+      <a href="#">LINK 2</a>
+      <a href="#">LINK 3</a>
+      <a href="#">LINK 4</a>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <!-- Pessoa 1 -->
+    <div class="card">
+      <img src="img/1.png" alt="Pessoa 1" class="profile-img" />
+      <div class="text-box">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut nisi vel velit.</p>
+      </div>
+      <a href="curriculos/pessoa1.pdf" download class="cv-btn">
+        <img src="icons/dow1.png" alt="Baixar CV" style="width: 20px; height: 20px;">
+      </a>
+    </div>
+
+    <!-- Pessoa 2 -->
+    <div class="card reverse">
+      <img src="img/2.png" alt="Pessoa 2" class="profile-img" />
+      <div class="text-box">
+        <p>Praesent eget libero nec massa tincidunt fermentum. Curabitur non quam sed nisi.</p>
+      </div>
+      <a href="curriculos/amine.pdf" download class="cv-btn">
+        <img src="icons/dow1.png" alt="Baixar CV" style="width: 20px; height: 20px;">
+      </a>
+    </div>
+
+    <!-- Pessoa 3 -->
+    <div class="card">
+      <img src="img/3.png" alt="Pessoa 3" class="profile-img" />
+      <div class="text-box">
+        <p>Morbi blandit justo vitae sapien tincidunt, a bibendum sapien hendrerit.</p>
+      </div>
+      <a href="curriculos/pessoa1.pdf" download class="cv-btn">
+        <img src="icons/dow1.png" alt="Baixar CV" style="width: 20px; height: 20px;">
+      </a>
+    </div>
+
+    <!-- Pessoa 4 -->
+    <div class="card reverse">
+      <img src="img/4.png" alt="Pessoa 4" class="profile-img" />
+      <div class="text-box">
+        <p>Fusce euismod, nisi at fermentum vulputate, lectus sapien pulvinar eros, a fermentum.</p>
+      </div>
+      <a href="curriculos/caio.pdf" download class="cv-btn">
+        <img src="icons/dow1.png" alt="Baixar CV" style="width: 20px; height: 20px;">
+      </a>
+    </div>
+
+    <!-- Pessoa 5 -->
+    <div class="card">
+      <img src="img/5.png" alt="Pessoa 5" class="profile-img" />
+      <div class="text-box">
+        <p>Sed nec diam sed libero pulvinar suscipit. Cras a urna non erat convallis feugiat.</p>
+      </div>
+      <a href="curriculos/pessoa1.pdf" download class="cv-btn">
+        <img src="icons/dow1.png" alt="Baixar CV" style="width: 20px; height: 20px;">
+      </a>
+    </div>
+
+  </div>
+
+</body>
+</html>
