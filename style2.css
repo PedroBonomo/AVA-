@@ -183,35 +183,38 @@ nav a {
 
 /* SEÇÃO DE IMAGENS EM PIRÂMIDE */
 .pyramid-section {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colunas na linha superior */
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
   padding: 40px 20px;
+}
+
+.pyramid-row {
+  display: flex;
+  gap: 40px;
+}
+
+.top-row {
   justify-content: center;
 }
 
-.pyramid-item:nth-child(4),
-.pyramid-item:nth-child(5) {
-  grid-column: span 2; /* Faz com que os itens 4 e 5 ocupem 2 colunas */
- /* Centraliza os itens na linha inferior */
+.bottom-row {
+  justify-content: center;
 }
 
+/* Itens individuais */
 .pyramid-item {
   text-align: center;
 }
 
 .pyramid-item img {
-  width: 100%;
-  max-width: 200px;
+  width: 150px;
   height: auto;
-  border-radius: 8px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.pyramid-item p {
-  margin-top: 10px;
-  font-size: 0.9rem;
-  color: #333;
-}
 
 /* FOOTER */
 footer {
