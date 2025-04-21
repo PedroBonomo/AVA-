@@ -180,6 +180,11 @@ nav a {
   text-align: center;
   border-radius: 8px;
 }
+.card.blue:hover {
+  transform: scale(1.05);
+  background: #90caf9; /* tom mais escuro, mas ainda suave */
+  transition: all 0.3s ease;
+}
 
 /* CTA VERDE */
 .cta-green {
@@ -229,6 +234,10 @@ nav a {
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.pyramid-item img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 
