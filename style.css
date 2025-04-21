@@ -6,9 +6,11 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #ffffff;
+  background-color: #fffbe6;
   color: #333;
 }
+
+/* =============== HOME ================= */
 
 /* HEADER E MENU */
 header {
@@ -67,29 +69,6 @@ nav a:hover::after {
   width: 100%;
 }
 
-/* HERO */
-.hero {
-  background: #ffc107;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.hero img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-}
-
-.main-btn {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border: none;
-  background: #333;
-  color: white;
-  cursor: pointer;
-}
-
 /* CARDS DE CIMA */
 .cards-top {
   display: flex;
@@ -112,7 +91,7 @@ nav a:hover::after {
   justify-content: space-around;
   gap: 20px;
   padding: 40px 20px;
-  background: #f9f9f9;
+  background: #fffbe6;
 }
 
 .card img {
@@ -128,7 +107,8 @@ nav a:hover::after {
 
 /* CARD BLUE COM HOVER */
 .card.blue {
-  background: #bbdefb;
+  background: #ffffff;
+  color: #7a52d6;
   padding: 20px;
   text-align: center;
   border-radius: 8px;
@@ -137,7 +117,7 @@ nav a:hover::after {
 
 .card.blue:hover {
   transform: scale(1.05);
-  background: #90caf9;
+  background: #90c1f9;
 }
 
 /* CTA VERDE */
@@ -157,7 +137,7 @@ nav a:hover::after {
 }
 
 /* PIRÂMIDE DE IMAGENS */
-.pyramid-section {
+.piramide {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -165,30 +145,32 @@ nav a:hover::after {
   padding: 40px 20px;
 }
 
-.pyramid-row {
+.linha-piramide {
   display: flex;
   gap: 40px;
 }
 
-.top-row, .bottom-row {
+.linha-superior,
+.linha-inferior {
   justify-content: center;
 }
 
-.pyramid-item {
+.item-piramide {
   text-align: center;
 }
 
-.pyramid-item img {
-  width: 150px;
+.item-piramide img {
+  width: 200px;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
 
-.pyramid-item img:hover {
+.item-piramide img:hover {
   transform: scale(1.05);
 }
+
 
 /* CARROSSEL */
 .carousel {
@@ -256,47 +238,322 @@ nav a:hover::after {
   margin-left: 10px;
 }
 
-/* FOOTER */
+/* =============== SOBRE ANTIGO ================= 
+body.sobre {
+  background-color: #4B2A8C;
+  color: white;
+}
+
+.container {
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+body.sobre .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+body.sobre .card.reverse {
+  flex-direction: row-reverse;
+}
+
+
+body.sobre .profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 20%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+
+.text-box {
+  color: #f9c232;
+  max-width: 500px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.cv-btn {
+  background-color: #7a52d6;
+  color: white;
+  padding: 8px;
+  border-radius: 25%;
+  font-weight: bold;
+  width: 40px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cv-btn:hover {
+  background-color: #9c74f3;
+  transform: scale(1.05);
+}
+
+.card-sobre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  background: transparent; 
+  padding: 10px 0;
+}
+
+.card-sobre.reverse {
+  flex-direction: row-reverse;
+}
+
+body.sobre .text-box {
+  color: #f9c232;
+  max-width: 500px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+body.sobre .profile-img {
+  width: 140px;
+  height: 200px;
+  border-radius: 20px 20px 20px 20px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+body.sobre .cv-btn {
+  background-color: #7a52d6;
+  color: white;
+  padding: 8px;
+  border-radius: 20px 20px 20px 20px;
+  font-weight: bold;
+  width: 40px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+body.sobre .cv-btn:hover {
+  background-color: #9c74f3;
+  transform: scale(1.05);
+}*/
+
+/* =============== SOBRE ================= */
+body.sobre-novo {
+  background-color: #fffbe6;
+  color: #4b2a8c;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.sobre-conteudo {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.perfil {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  background-color: #f9c232;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+.foto-perfil img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #fff;
+}
+
+.texto-perfil {
+  flex: 1;
+  color: #7a52d6;
+}
+
+.texto-perfil h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  
+}
+
+.timeline, .curiosidades, .galeria {
+  color: #7a52d6;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.timeline h2,
+.curiosidades h2,
+.galeria h2 {
+  margin-bottom: 15px;
+}
+
+.timeline ul, .curiosidades ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline li,
+.curiosidades li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 1.05rem;
+}
+
+.galeria .grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.galeria img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+.grid-galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* =============== RODAPÉ ================= */
 footer {
-  background: #e0e0e0;
+  background-color: #4b2a8c;
+  color: white;
   text-align: center;
   padding: 20px;
   font-size: 0.9rem;
+  border-top: 5px solid #f9c232; /* Faixa amarela pra conectar com o tema */
 }
 
-/* RESPONSIVIDADE */
+/* =============== RESPONSIVO ================= */
 @media (max-width: 768px) {
-  .card, .card.reverse {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .text-box {
-    text-align: center;
-  }
-
   header nav {
     justify-content: center;
+  }
+
+  .perfil,
+  .cards-top,
+  .cards-bottom,
+  .faixa-carrossel,
+  .linha-piramide {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .texto-perfil {
+    text-align: center;
   }
 }
 
 @media (max-width: 480px) {
-  .container {
+  .sobre-conteudo,
+  .piramide {
     padding: 20px 10px;
   }
 
-  .profile-img {
-    width: 100px;
-    height: 100px;
+  .foto-perfil img {
+    width: 150px;
+    height: 150px;
   }
 
-  .text-box {
+  .texto-perfil p {
     font-size: 1rem;
   }
 
-  .cv-btn {
-    width: 36px;
-    height: 36px;
-    font-size: 0.9rem;
+  .grade-galeria {
+    grid-template-columns: 1fr;
   }
+  .carrossel {
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .faixa-carrossel {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .item-carrossel {
+    flex: 0 0 20%;
+    transform: scale(0.8);
+    filter: brightness(0.4);
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .item-carrossel.ativo {
+    transform: scale(1.1);
+    filter: brightness(1);
+  }
+  
+  .btn-carrossel {
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    padding: 10px 15px;
+    font-size: 2.5rem;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .btn-carrossel:hover {
+    background: rgba(255, 255, 255, 0.5);
+  }
+  .piramide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 20px;
+  }
+  
+  .linha-piramide {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+  }
+  
+  .item-piramide {
+    text-align: center;
+  }
+  
+  .item-piramide img {
+    width: 200px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .item-piramide img:hover {
+    transform: scale(1.05);
+  }  
+  
 }
