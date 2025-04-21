@@ -30,6 +30,10 @@ header {
   color: white; /* Muda a cor do texto da logo */
 }
 
+.logo img{
+  width: 20%;
+}
+
 nav.menu {
   display: flex;
   align-items: center;
