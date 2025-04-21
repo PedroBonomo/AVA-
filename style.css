@@ -10,6 +10,15 @@ body {
   color: #333;
 }
 
+.titulo-port {
+  padding: center;
+  font-size: 2.5rem;
+  color: #4b2a8c;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 /* =============== HOME ================= */
 
 /* HEADER E MENU UNIFICADOS */
@@ -145,12 +154,6 @@ nav a:hover::after {
   align-items: center;
   gap: 40px;
   padding: 40px 20px;
-}
-
-.piramide h1 {
-  color: #4b2a8c;
-  width: 50px;
-  text-align: center;
 }
 
 .linha-piramide {
@@ -348,6 +351,87 @@ body.sobre-novo {
 .grid-galeria img:hover {
   transform: scale(1.05);
 }
+
+/* =============== PORTFÓLIO ================= */
+.portfolio-container {
+  padding: 60px 20px;
+  background-color: #fffbe6;
+  text-align: center;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projeto-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projeto-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.projeto-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.projeto-card h2 {
+  font-size: 1.4rem;
+  color: #7a52d6;
+  margin-bottom: 10px;
+}
+
+.projeto-card p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.btn-vermais {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f9c232;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+}
+
+.btn-vermais:hover {
+  background-color: #a7801e;
+}
+
+.aluno-bloco {
+  margin-bottom: 60px;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: #4b2a8c;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.nome-aluno {
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f9c232;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+
 
 /* =============== RODAPÉ ================= */
 footer {
