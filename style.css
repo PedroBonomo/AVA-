@@ -467,3 +467,66 @@ footer {
   }  
   
 }
+
+.contato {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form {
+  margin-top: 30px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #f9c232;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #a7801e;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela th, .tabela td {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.tabela th {
+  background-color: #f9c232;
+  color: white;
+}
+
+.tabela tr:hover {
+  background-color: #ddd;
+}
+
+a img {
+  width: 24px;
+}
