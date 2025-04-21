@@ -7,25 +7,10 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #ffffff;
-}
- div.carousel {
-
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  overflow: hidden; /* Esconde o conteúdo que ultrapassa o limite do carrossel */
-  border-radius: 20px; /* Bordas arredondadas para o carrossel */
+  color: #333;
 }
 
-nav.menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #333;
-  color: white;
-}
-/* HEADER */
+/* HEADER E MENU */
 header {
   display: flex;
   justify-content: space-between;
@@ -38,31 +23,16 @@ header {
 .logo {
   font-weight: bold;
   font-size: 1.4rem;
+  color: #333;
 }
 
-.nav {
-  background: rgba(255, 255, 255, 0.3);
-  border: none;
-  padding: 10px 15px;
-  font-size: 2.5rem;
+nav.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
   color: white;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.3s;
-  position: relative;
-  z-index: 1;
-}
-
-.nav:hover {
-  background: rgba(255, 255, 255, 0.5);
-}
-
-.prev {
-  margin-right: 10px;
-}
-
-.next {
-  margin-left: 10px;
 }
 
 nav ul {
@@ -74,6 +44,27 @@ nav ul {
 nav a {
   text-decoration: none;
   color: #333;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: #333;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 /* HERO */
@@ -95,7 +86,7 @@ nav a {
   font-size: 1rem;
   border: none;
   background: #333;
-  color: rgb(255, 255, 255);
+  color: white;
   cursor: pointer;
 }
 
@@ -129,61 +120,24 @@ nav a {
   height: auto;
   border-radius: 8px 8px 0 0;
 }
+
 .card h3 {
   padding: 10px;
   font-size: 1.2rem;
 }
 
-.carousel {
-  overflow: visible; /* muda de hidden para visible */
-}
-
-.carousel-track {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px 0;
-  overflow: visible; /* garante que nada seja escondido */
-}
-.carousel img {
-  width: 100%; /* Garante que as imagens se ajustem ao tamanho do carrossel */
-  height: auto; /* Mantém a proporção das imagens */
-  display: flex;
-}
-
-.carousel-item {
-  flex: 0 0 20%; /* 5 itens = 100% / 5 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: scale(0.8);
-  filter: brightness(0.4);
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.carousel-item.active {
-  transform: scale(1.1);
-  filter: brightness(1);
-}
-
-.carousel-item img {
-  width: 220px;         /* imagem maior */
-  height: 300px;        /* altura fixa */
-  object-fit: cover;    /* garante o preenchimento sem deformar */
-  border-radius: 20px;  /* bordas suavemente arredondadas */
-}
-
+/* CARD BLUE COM HOVER */
 .card.blue {
   background: #bbdefb;
   padding: 20px;
   text-align: center;
   border-radius: 8px;
+  transition: all 0.3s ease;
 }
+
 .card.blue:hover {
   transform: scale(1.05);
-  background: #90caf9; /* tom mais escuro, mas ainda suave */
-  transition: all 0.3s ease;
+  background: #90caf9;
 }
 
 /* CTA VERDE */
@@ -202,7 +156,7 @@ nav a {
   cursor: pointer;
 }
 
-/* SEÇÃO DE IMAGENS EM PIRÂMIDE */
+/* PIRÂMIDE DE IMAGENS */
 .pyramid-section {
   display: flex;
   flex-direction: column;
@@ -216,15 +170,10 @@ nav a {
   gap: 40px;
 }
 
-.top-row {
+.top-row, .bottom-row {
   justify-content: center;
 }
 
-.bottom-row {
-  justify-content: center;
-}
-
-/* Itens individuais */
 .pyramid-item {
   text-align: center;
 }
@@ -234,12 +183,78 @@ nav a {
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-.pyramid-item img:hover {
-  transform: scale(1.05);
   transition: transform 0.3s ease;
 }
 
+.pyramid-item img:hover {
+  transform: scale(1.05);
+}
+
+/* CARROSSEL */
+.carousel {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: visible;
+  border-radius: 20px;
+}
+
+.carousel-track {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  overflow: visible;
+}
+
+.carousel-item {
+  flex: 0 0 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.8);
+  filter: brightness(0.4);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.carousel-item.active {
+  transform: scale(1.1);
+  filter: brightness(1);
+}
+
+.carousel-item img {
+  width: 220px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* BOTÕES DO CARROSSEL */
+.nav {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  padding: 10px 15px;
+  font-size: 2.5rem;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.nav:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.prev {
+  margin-right: 10px;
+}
+
+.next {
+  margin-left: 10px;
+}
 
 /* FOOTER */
 footer {
@@ -247,4 +262,41 @@ footer {
   text-align: center;
   padding: 20px;
   font-size: 0.9rem;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .card, .card.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-box {
+    text-align: center;
+  }
+
+  header nav {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px 10px;
+  }
+
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .text-box {
+    font-size: 1rem;
+  }
+
+  .cv-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
 }
