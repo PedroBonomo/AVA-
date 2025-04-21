@@ -15,7 +15,7 @@ Crie um arquivo index.html e adicione um formulário com os campos necessários:
 </form>
 
 
-2️⃣ Criar o script PHP para processar o envio
+Criar o script PHP para processar o envio
 Crie um arquivo processa.php para capturar os dados e enviar por e-mail:
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
