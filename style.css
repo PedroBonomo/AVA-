@@ -500,32 +500,6 @@ body.novidades {
   margin: 8px 0;
 }
 
-.galeria-integrante {
-  margin-top: 20px;
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.galeria-integrante img {
-  width: 150px;
-  border-radius: 12px;
-  transition: transform 0.3s;
-}
-
-.galeria-integrante img:hover {
-  transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
-  .card-integrante {
-    flex-direction: column;
-    text-align: center;
-  }
-  .galeria-integrante {
-    justify-content: center;
-  }
-}
 
 /* =============== CONTATO ================= */
 .contato h1{
