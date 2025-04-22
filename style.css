@@ -271,6 +271,12 @@ body.sobre-novo {
   font-family: 'Segoe UI', sans-serif;
 }
 
+.btn-container {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
 .sobre-conteudo {
   max-width: 1100px;
   margin: 40px auto;
@@ -410,6 +416,16 @@ body.sobre-novo {
   transition: background 0.3s ease;
 }
 
+.btn-baixar {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #7a52d6;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+}
+
 .btn-vermais:hover {
   background-color: #a7801e;
 }
@@ -430,8 +446,91 @@ body.sobre-novo {
   display: inline-block;
   padding-bottom: 5px;
 }
+/* =============== Novidades ================= */
+body.novidades {
+  background-color: #fffbe6;
+  font-family: 'Segoe UI', sans-serif;
+  color: #4b2a8c;
+}
+
+.container-novidades {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.titulo-novidades {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #7a52d6;
+}
+
+.card-integrante {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 30px;
+  align-items: center;
+  /*justify-content: center; /* 👈 Esse é o pulo do gato */
+}
+
+.foto-integrante img {
+  width: 150px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.info-integrante {
+  flex: 1;
+}
+
+.info-integrante h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.info-integrante p {
+  margin: 8px 0;
+}
+
+.galeria-integrante {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.galeria-integrante img {
+  width: 150px;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.galeria-integrante img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .card-integrante {
+    flex-direction: column;
+    text-align: center;
+  }
+  .galeria-integrante {
+    justify-content: center;
+  }
+}
 
 /* =============== CONTATO ================= */
+.contato h1{
+  text-align:center;
+}
 .contato {
   max-width: 800px;
   margin: 20px auto;
