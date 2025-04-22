@@ -573,12 +573,18 @@ input[type="submit"]:hover {
 .tabela {
   width: 100%;
   border-collapse: collapse;
+  
 }
 
 .tabela th, .tabela td {
   border: 1px solid #ddd;
   text-align: left;
   padding: 8px;
+}
+
+.tabela th, .tabela td {
+  text-align: center;
+  vertical-align: middle;
 }
 
 .tabela th {
@@ -603,6 +609,101 @@ textarea {
   font-size: 1rem;
   border-radius: 10px;
   border: 1px solid #ccc;
+}
+/* === CONTATO MODERNO === */
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.campo-form label {
+  font-weight: 600;
+  color: #4b2a8c;
+}
+
+.campo-form input,
+.campo-form textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.campo-form input:focus,
+.campo-form textarea:focus {
+  border-color: #7a52d6;
+  outline: none;
+}
+
+.btn-enviar-container {
+  text-align: center;
+}
+
+.btn-enviar {
+  background-color: #7a52d6;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-enviar:hover {
+  background-color: #f9c232;
+  color: #4b2a8c;
+}
+
+.titulo-centralizado {
+  display: flex;
+  justify-content: center;
+}
+
+.titulo-centralizado h1 {
+  border-bottom: 3px solid #f9c232;
+  color: #4b2a8c;
+  font-size: 2rem;
+}
+
+
+.subtitulo-contato {
+  margin-top: 40px;
+  text-align: center;
+  color: #4b2a8c;
+  font-size: 1.6rem;
+  border-bottom: 2px solid #f9c232;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #eee;
+  color: #4b2a8c;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #f9c232;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.social-icon.instagram:hover {
+  background-color: #E1306C;
+}
+
+.social-icon.linkedin:hover {
+  background-color: #0077B5;
 }
 
 /* =============== RODAPÉ ================= */

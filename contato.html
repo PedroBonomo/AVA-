@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contato</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
@@ -14,7 +15,7 @@
     <nav id="menu">
       <ul>
         <li><a href="home.html">Home</a></li>
-        <li><a href="portifolio.html">Portifolio</a></li>
+        <li><a href="portfolio.html">Portfólio</a></li>
         <li><a href="novidades.html">Novidades</a></li>
         <li><a href="contato.html">Contato</a></li>
       </ul>
@@ -22,72 +23,104 @@
   </header>
 
   <section class="contato">
-    <h1>Envie sua mensagem abaixo</h1>
-      <form action="processa.php" method="post">
-          <label for="nome">Seu Nome:</label><br>
-          <input type="text" id="nome" name="Nome" required><br>
-
-          <label for="email">Seu Email:</label><br>
-          <input type="email" id="email" name="Email" required><br>
-
-          <label for="mensagem">Mensagem:</label><br>
-          <textarea name="Mensagem" id="mensagem"></textarea><br><br>
-
-          <input type="submit" value="Enviar">
-      </form>
-
-  <table class="tabela">
-    <tr>
-      <th>Nome</th>
-      <th>Instagram</th>
-      <th>Linkedin</th>
-    </tr>
-    <tr>
-      <td>Amine Gomes</td>
-      <td><a href="https://www.instagram.com/amine_gomes/" aria-label="Instagram da Amine" target="_blank">
-        <img src="icons/icone-instagram.png">
-      </a></td>
-      <td><a href="http://www.linkedin.com/in/amine-gomes-4107992b3" aria-label="Linkedin da Amine" target="_blank">
-        <img src="icons/icone-linkedin.png">
-      </a></td>
-    </tr>
-    <tr>
-      <td>Caio Melo</td>
-      <td><a href="https://www.instagram.com/caiovinicius_melo/" aria-label="Instagram do Caio" target="_blank">
-        <img src="icons/icone-instagram.png">
-      </a></td>
-      <td><a href="https://www.linkedin.com/in/caio-mangueira-01811a1b5/" aria-label="Linkedin do Caio" target="_blank">
-        <img src="icons/icone-linkedin.png">
-      </a></td>
-    </tr>
-    <tr>
-      <td>Nathã Melo</td>
-      <td><a href="https://www.instagram.com/melo.twk/" aria-label="Instagram do Nathã" target="_blank">
-        <img src="icons/icone-instagram.png">
-      </a></td>
-      <td><a href="https://www.linkedin.com/in/nath%C3%A3-melo-8a905b2a7/" aria-label="Linkedin do Nathã" target="_blank">
-        <img src="icons/icone-linkedin.png">
-      </a></td>
-    </tr>
-    <tr>
-      <td>Pedro Boonomo</td>
-      <td><a href="https://www.instagram.com/bonomopedro0/" aria-label="Instagram do Pedro" target="_blank">
-        <img src="icons/icone-instagram.png">
-      </a></td>
-      <td><a href="https://www.linkedin.com/in/pedro-bonomo-609518360/" aria-label="Linkedin do Pedro" target="_blank">
-        <img src="icons/icone-linkedin.png">
-      </a></td>
-    </tr>
-    <tr>
-      <td>Silvana Gomes</td>
-      <td><a href="https://www.instagram.com/sgome_s29/" aria-label="Instagram da Silvana" target="_blank">
-        <img src="icons/icone-instagram.png">
-      </a></td>
-      <td><a href="https://www.linkedin.com/in/silvana-gomes-b52725247/" aria-label="Linkedin da Silvana" target="_blank">
-        <img src="icons/icone-linkedin.png">
-      </a></td>
-    </tr>
-  </table>
+    <div class="titulo-centralizado">
+      <h1>Entre em contato conosco</h1>
+    </div>
+  
+    <form action="processa.php" method="post" class="form-contato">
+      <div class="campo-form">
+        <label for="nome">Seu Nome:</label>
+        <input type="text" id="nome" name="Nome" required>
+      </div>
+  
+      <div class="campo-form">
+        <label for="email">Seu Email:</label>
+        <input type="email" id="email" name="Email" required>
+      </div>
+  
+      <div class="campo-form">
+        <label for="mensagem">Mensagem:</label>
+        <textarea name="Mensagem" id="mensagem" placeholder="Digite sua mensagem..."></textarea>
+      </div>
+  
+      <div class="btn-enviar-container">
+        <input type="submit" value="Enviar" class="btn-enviar">
+      </div>
+    </form>
+  
+    <h2 class="subtitulo-contato">Nossa equipe</h2>
+    <table class="tabela">
+      <tr>
+        <th>Nome</th>
+        <th>Instagram</th>
+        <th>LinkedIn</th>
+      </tr>
+      <tr>
+        <td>Amine Gomes</td>
+        <td>
+          <a href="https://www.instagram.com/amine_gomes/" target="_blank" class="social-icon instagram" aria-label="Instagram da Amine">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </td>
+        <td>
+          <a href="http://www.linkedin.com/in/amine-gomes-4107992b3" target="_blank" class="social-icon linkedin" aria-label="LinkedIn da Amine">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>Caio Melo</td>
+        <td>
+          <a href="https://www.instagram.com/caiovinicius_melo/" target="_blank" class="social-icon instagram" aria-label="Instagram do Caio">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </td>
+        <td>
+          <a href="https://www.linkedin.com/in/caio-mangueira-01811a1b5/" target="_blank" class="social-icon linkedin" aria-label="LinkedIn do Caio">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>Nathã Melo</td>
+        <td>
+          <a href="https://www.instagram.com/melo.twk/" target="_blank" class="social-icon instagram" aria-label="Instagram do Nathã">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </td>
+        <td>
+          <a href="https://www.linkedin.com/in/nath%C3%A3-melo-8a905b2a7/" target="_blank" class="social-icon linkedin" aria-label="LinkedIn do Nathã">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>Pedro Bonomo</td>
+        <td>
+          <a href="https://www.instagram.com/bonomopedro0/" target="_blank" class="social-icon instagram" aria-label="Instagram do Pedro">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </td>
+        <td>
+          <a href="https://www.linkedin.com/in/pedro-bonomo-609518360/" target="_blank" class="social-icon linkedin" aria-label="LinkedIn do Pedro">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>Silvana Gomes</td>
+        <td>
+          <a href="https://www.instagram.com/sgome_s29/" target="_blank" class="social-icon instagram" aria-label="Instagram da Silvana">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </td>
+        <td>
+          <a href="https://www.linkedin.com/in/silvana-gomes-b52725247/" target="_blank" class="social-icon linkedin" aria-label="LinkedIn da Silvana">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </td>
+      </tr>
+    </table>
   </section>
 <body>
     
