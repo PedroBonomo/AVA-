@@ -31,18 +31,6 @@ body {
 
 /* =============== HOME ================= */
 
-/* HEADER E MENU UNIFICADOS 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background: #4b2a8c; /* Fundo roxo, igual ao footer 
-  color: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  border-bottom: 5px solid #f9c232; /* Faixa amarela 
-}*/
-
 .logo {
   font-weight: bold;
   font-size: 1.4rem;
