@@ -5,9 +5,8 @@
 }
 
 body {
+  margin-left: 200px;
   font-family: Arial, sans-serif;
-  background-color: #fffbe6;
-  color: #333;
 }
 
 .titulo-port {
@@ -21,17 +20,17 @@ body {
 
 /* =============== HOME ================= */
 
-/* HEADER E MENU UNIFICADOS */
+/* HEADER E MENU UNIFICADOS 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background: #4b2a8c; /* Fundo roxo, igual ao footer */
+  background: #4b2a8c; /* Fundo roxo, igual ao footer 
   color: white;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  border-bottom: 5px solid #f9c232; /* Faixa amarela */
-}
+  border-bottom: 5px solid #f9c232; /* Faixa amarela 
+}*/
 
 .logo {
   font-weight: bold;
@@ -45,13 +44,17 @@ header {
 
 nav.menu {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 nav ul {
   display: flex;
+  flex-direction: column;
   gap: 20px;
   list-style: none;
+  padding: 0;
 }
 
 nav a {
@@ -102,7 +105,6 @@ nav a:hover::after {
   justify-content: space-around;
   gap: 20px;
   padding: 40px 20px;
-  background: #fffbe6;
 }
 
 .card img {
@@ -119,8 +121,8 @@ nav a:hover::after {
 /* CARD BLUE COM HOVER */
 .card.blue {
   background: #ffffff;
-  color: #7a52d6;
-  padding: 20px;
+  color: #4b2a8c;
+  padding: 10px;
   text-align: center;
   border-radius: 8px;
   transition: all 0.3s ease;
@@ -307,7 +309,7 @@ body.sobre-novo {
 
 .texto-perfil {
   flex: 1;
-  color: #7a52d6;
+  color: #4b2a8c;
 }
 
 .texto-perfil h1 {
@@ -317,7 +319,7 @@ body.sobre-novo {
 }
 
 .timeline, .curiosidades, .galeria {
-  color: #7a52d6;
+  color: #4b2a8c;
   padding: 20px;
   border-radius: 12px;
   background-color: #ffffff;
@@ -396,7 +398,7 @@ body.sobre-novo {
 
 .projeto-card h2 {
   font-size: 1.4rem;
-  color: #7a52d6;
+  color: #4b2a8c;
   margin-bottom: 10px;
 }
 
@@ -419,7 +421,7 @@ body.sobre-novo {
 .btn-baixar {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #7a52d6;
+  background-color: #4b2a8c;
   color: white;
   text-decoration: none;
   border-radius: 30px;
@@ -466,7 +468,7 @@ body.novidades {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 40px;
-  color: #7a52d6;
+  color: #4b2a8c;
 }
 
 .card-integrante {
@@ -607,7 +609,7 @@ textarea {
 
 .campo-form input:focus,
 .campo-form textarea:focus {
-  border-color: #7a52d6;
+  border-color: #4b2a8c;
   outline: none;
 }
 
@@ -616,7 +618,7 @@ textarea {
 }
 
 .btn-enviar {
-  background-color: #7a52d6;
+  background-color: #4b2a8c;
   color: #fff;
   padding: 12px 30px;
   font-size: 1rem;
@@ -796,5 +798,73 @@ footer {
   .item-piramide img:hover {
     transform: scale(1.05);
   }  
-  
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 200px;
+  background-color: #4b2a8c; /* roxo escuro */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 1000;
+}
+
+/* Sidebar lateral fixa */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: #4b2a8c; /* roxo escuro */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 1000;
+}
+
+/* Logo dentro da sidebar */
+.sidebar .logo img {
+  width: 100px;
+  margin-bottom: 40px;
+}
+
+/* Menu vertical */
+.sidebar .menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.sidebar .menu ul li {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.sidebar .menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  display: block;
+  transition: color 0.3s;
+}
+
+.sidebar .menu ul li a:hover {
+  color: #FFD700;
+}
+.carrossel {
+  width: 100%;
+  background-color: #4b2a8c; /* roxo escuro */
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 1000;
 }
